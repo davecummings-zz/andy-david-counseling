@@ -8,14 +8,15 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-gray-100">
+      <nav className="sticky top-0 z-50 bg-white" style={{ borderBottom: '1px solid #D5E1DF' }}>
         <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-xl font-bold text-gray-900">Andy David</h1>
+          <h1 className="text-xl font-bold" style={{ color: '#72827F' }}>Andy David, MA, LPC</h1>
           
           {/* Mobile Menu Button */}
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="md:hidden text-2xl text-gray-600"
+            className="md:hidden text-2xl"
+            style={{ color: '#72827F' }}
           >
             ☰
           </button>
@@ -31,36 +32,36 @@ export default function Home() {
 
         {/* Mobile Menu */}
         {sidebarOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100">
+          <div className="md:hidden" style={{ backgroundColor: '#D5E1DF', borderTop: '1px solid #D5E1DF' }}>
             <div className="max-w-4xl mx-auto px-4 py-4 flex flex-col gap-4">
-              <a href="#about" className="text-gray-700 hover:text-sage" onClick={() => setSidebarOpen(false)}>About</a>
-              <a href="#services" className="text-gray-700 hover:text-sage" onClick={() => setSidebarOpen(false)}>Services</a>
-              <a href="#testimonials" className="text-gray-700 hover:text-sage" onClick={() => setSidebarOpen(false)}>Testimonials</a>
-              <a href="#contact" className="text-gray-700 hover:text-sage" onClick={() => setSidebarOpen(false)}>Contact</a>
+              <a href="#about" className="hover:text-sage" onClick={() => setSidebarOpen(false)} style={{ color: '#72827F' }}>About</a>
+              <a href="#services" className="hover:text-sage" onClick={() => setSidebarOpen(false)} style={{ color: '#72827F' }}>Services</a>
+              <a href="#testimonials" className="hover:text-sage" onClick={() => setSidebarOpen(false)} style={{ color: '#72827F' }}>Testimonials</a>
+              <a href="#contact" className="hover:text-sage" onClick={() => setSidebarOpen(false)} style={{ color: '#72827F' }}>Contact</a>
             </div>
           </div>
         )}
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="py-20 md:py-32 bg-gradient-to-b from-white via-sage/5 to-white">
+      <section id="hero" className="py-20 md:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-5xl md:text-6xl font-light mb-2 text-gray-900">
+          <h2 className="text-5xl md:text-6xl font-light mb-2" style={{ color: '#72827F' }}>
             Andy David
           </h2>
-          <p className="text-xl text-gray-600 mb-2">
+          <p className="text-xl mb-2" style={{ color: '#72827F' }}>
             Licensed Professional Counselor, MA
           </p>
           <p className="text-sage font-semibold mb-8">
             IFS-Informed Therapist
           </p>
           
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-lg max-w-2xl mx-auto mb-12 leading-relaxed" style={{ color: '#72827F' }}>
             I'm here to create a safe, brave, active space for your journey towards healing and growth. 
             We all have seasons of life where we feel overwhelmed, depressed, anxious, or out of sync in relationships.
           </p>
 
-          <p className="text-gray-600 max-w-2xl mx-auto mb-12">
+          <p className="max-w-2xl mx-auto mb-12" style={{ color: '#72827F' }}>
             But there is a pathway to becoming the most authentic version of yourself. Your life has meaning and purpose. 
             Let's find it, together.
           </p>
@@ -75,23 +76,23 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 md:py-24 bg-white">
+      <section id="about" className="py-16 md:py-24" style={{ backgroundColor: '#D5E1DF' }}>
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-light text-gray-900 mb-12 text-center">
+          <h3 className="text-3xl md:text-4xl font-light mb-12 text-center" style={{ color: '#72827F' }}>
             About My Approach
           </h3>
 
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">
+              <h4 className="text-lg font-semibold mb-4" style={{ color: '#72827F' }}>
                 Internal Family Systems (IFS)
               </h4>
-              <p className="text-gray-700 mb-6">
+              <p className="mb-6" style={{ color: '#72827F' }}>
                 Learning why we do what we do is important, but then comes that key question of what to do with that information. 
                 My goal is to create a safe space for self-discovery, but also an active space—a brave space in which we explore 
                 new perspectives and frameworks for seeing.
               </p>
-              <p className="text-gray-700">
+              <p style={{ color: '#72827F' }}>
                 Relationships follow a pattern from the past. And they do so by forging unique "parts" within us. 
                 You may find that you bounce between one extreme thought or feeling and its opposite. 
                 If we slow down and learn more about each part, we can help the parts heal. 
@@ -100,16 +101,16 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">
+              <h4 className="text-lg font-semibold mb-4" style={{ color: '#72827F' }}>
                 Your True Self
               </h4>
-              <p className="text-gray-700 mb-6">
+              <p className="mb-6" style={{ color: '#72827F' }}>
                 Together, we can chart a new path of hope for your life. 
                 We can take steps toward positive change and a more intentional way of living into who you really are—your True Self.
               </p>
-              <div className="bg-sage/10 p-6 rounded">
-                <p className="text-gray-900 font-semibold mb-2">Take heart. Take courage.</p>
-                <p className="text-gray-700 text-sm">
+              <div className="bg-white/50 p-6 rounded">
+                <p className="font-semibold mb-2" style={{ color: '#72827F' }}>Take heart. Take courage.</p>
+                <p className="text-sm" style={{ color: '#72827F' }}>
                   Reach out for a free phone consultation today.
                 </p>
               </div>
@@ -117,26 +118,26 @@ export default function Home() {
           </div>
 
           {/* Credentials */}
-          <div className="mt-16 pt-16 border-t border-gray-100">
-            <h4 className="text-lg font-semibold text-gray-900 mb-6 text-center">
+          <div className="mt-16 pt-16" style={{ borderTop: '1px solid #D5E1DF' }}>
+            <h4 className="text-lg font-semibold mb-6 text-center" style={{ color: '#72827F' }}>
               Credentials & Experience
             </h4>
             <div className="grid md:grid-cols-2 gap-8 text-center">
               <div>
                 <p className="text-sage font-semibold mb-2">Licensed Professional Counselor</p>
-                <p className="text-gray-600">Texas LPC License</p>
+                <p style={{ color: '#72827F' }}>Texas LPC License</p>
               </div>
               <div>
                 <p className="text-sage font-semibold mb-2">Master's Degree</p>
-                <p className="text-gray-600">in Counseling</p>
+                <p style={{ color: '#72827F' }}>in Counseling</p>
               </div>
               <div>
                 <p className="text-sage font-semibold mb-2">IFS Certified</p>
-                <p className="text-gray-600">Internal Family Systems Training</p>
+                <p style={{ color: '#72827F' }}>Internal Family Systems Training</p>
               </div>
               <div>
                 <p className="text-sage font-semibold mb-2">Practicing Since</p>
-                <p className="text-gray-600">2015</p>
+                <p style={{ color: '#72827F' }}>2015</p>
               </div>
             </div>
           </div>
@@ -144,16 +145,16 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 md:py-24 bg-sage/5">
+      <section id="services" className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-light text-gray-900 mb-12 text-center">
+          <h3 className="text-3xl md:text-4xl font-light mb-12 text-center" style={{ color: '#72827F' }}>
             Services
           </h3>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-white p-8 rounded">
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Specialties</h4>
-              <ul className="space-y-3 text-gray-700">
+            <div className="p-8 rounded" style={{ backgroundColor: '#D5E1DF' }}>
+              <h4 className="text-xl font-semibold mb-4" style={{ color: '#72827F' }}>Specialties</h4>
+              <ul className="space-y-3" style={{ color: '#72827F' }}>
                 <li className="flex items-start">
                   <span className="text-sage mr-3 font-bold">→</span>
                   <span>Relationship Issues & Conflict</span>
@@ -177,39 +178,39 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="bg-white p-8 rounded">
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">Session Formats</h4>
+            <div className="p-8 rounded" style={{ backgroundColor: '#D5E1DF' }}>
+              <h4 className="text-xl font-semibold mb-4" style={{ color: '#72827F' }}>Session Formats</h4>
               <div className="space-y-4">
                 <div>
-                  <p className="font-semibold text-gray-900 mb-1">Individual Therapy</p>
-                  <p className="text-gray-600 text-sm">For personal growth and healing</p>
+                  <p className="font-semibold mb-1" style={{ color: '#72827F' }}>Individual Therapy</p>
+                  <p className="text-sm" style={{ color: '#72827F' }}>For personal growth and healing</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900 mb-1">Couples Counseling</p>
-                  <p className="text-gray-600 text-sm">For relationship enhancement</p>
+                  <p className="font-semibold mb-1" style={{ color: '#72827F' }}>Couples Counseling</p>
+                  <p className="text-sm" style={{ color: '#72827F' }}>For relationship enhancement</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900 mb-1">Group Therapy</p>
-                  <p className="text-gray-600 text-sm">For shared experiences & support</p>
+                  <p className="font-semibold mb-1" style={{ color: '#72827F' }}>Group Therapy</p>
+                  <p className="text-sm" style={{ color: '#72827F' }}>For shared experiences & support</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Pricing & Logistics */}
-          <div className="bg-white p-8 rounded text-center">
+          <div className="p-8 rounded text-center" style={{ backgroundColor: '#D5E1DF' }}>
             <div className="grid md:grid-cols-3 gap-8">
               <div>
                 <p className="text-sage font-semibold text-2xl mb-2">$160</p>
-                <p className="text-gray-600">Per Session</p>
+                <p style={{ color: '#72827F' }}>Per Session</p>
               </div>
               <div>
                 <p className="text-sage font-semibold text-lg mb-2">Insurance Accepted</p>
-                <p className="text-gray-600 text-sm">Check your coverage</p>
+                <p className="text-sm" style={{ color: '#72827F' }}>Check your coverage</p>
               </div>
               <div>
                 <p className="text-sage font-semibold text-lg mb-2">Flexible Formats</p>
-                <p className="text-gray-600 text-sm">In-person • Video • Phone</p>
+                <p className="text-sm" style={{ color: '#72827F' }}>In-person • Video • Phone</p>
               </div>
             </div>
           </div>
@@ -217,22 +218,22 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-16 md:py-24 bg-white">
+      <section id="testimonials" className="py-16 md:py-24" style={{ backgroundColor: '#D5E1DF' }}>
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-light text-gray-900 mb-12 text-center">
+          <h3 className="text-3xl md:text-4xl font-light mb-12 text-center" style={{ color: '#72827F' }}>
             What Others Say
           </h3>
 
-          <div className="bg-sage/10 p-8 md:p-12 rounded">
-            <p className="text-lg text-gray-700 mb-6 italic">
+          <div className="bg-white/50 p-8 md:p-12 rounded">
+            <p className="text-lg mb-6 italic" style={{ color: '#72827F' }}>
               "I was lucky enough to work with Andy while we were associates under the same supervisor. 
               He is one of a kind. Intuitive, patient, wholehearted, and funny. 
               I would highly recommend working with him. He's one of the good ones."
             </p>
-            <p className="font-semibold text-gray-900">
+            <p className="font-semibold" style={{ color: '#72827F' }}>
               Kaylia Schunemann
             </p>
-            <p className="text-gray-600 text-sm">
+            <p className="text-sm" style={{ color: '#72827F' }}>
               Licensed Professional Counselor, LPC
             </p>
           </div>
@@ -240,14 +241,14 @@ export default function Home() {
       </section>
 
       {/* Calendly Section */}
-      <section id="calendly" className="py-16 md:py-24 bg-sage/5">
+      <section id="calendly" className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-light text-gray-900 mb-12 text-center">
+          <h3 className="text-3xl md:text-4xl font-light mb-12 text-center" style={{ color: '#72827F' }}>
             Schedule Your Free Consultation
           </h3>
 
-          <div className="bg-white p-8 rounded text-center">
-            <p className="text-gray-700 mb-8">
+          <div className="p-8 rounded text-center" style={{ backgroundColor: '#D5E1DF' }}>
+            <p className="mb-8" style={{ color: '#72827F' }}>
               Ready to begin your journey? Schedule a free 15-minute phone consultation to see if we're a good fit.
             </p>
             <div className="inline-block w-full max-w-2xl">
@@ -258,7 +259,7 @@ export default function Home() {
                 frameBorder="0"
               ></iframe>
             </div>
-            <p className="text-gray-600 text-sm mt-6">
+            <p className="text-sm mt-6" style={{ color: '#72827F' }}>
               Note: Replace the Calendly link with your actual calendar URL
             </p>
           </div>
@@ -266,9 +267,9 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 md:py-24 bg-white">
+      <section id="contact" className="py-16 md:py-24" style={{ backgroundColor: '#D5E1DF' }}>
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-light text-gray-900 mb-12 text-center">
+          <h3 className="text-3xl md:text-4xl font-light mb-12 text-center" style={{ color: '#72827F' }}>
             Get in Touch
           </h3>
 
@@ -276,14 +277,14 @@ export default function Home() {
             <div className="space-y-8">
               <div>
                 <p className="text-sage font-semibold mb-2">Phone</p>
-                <a href="tel:+17372153986" className="text-gray-700 hover:text-sage transition">
+                <a href="tel:+17372153986" className="hover:text-sage transition" style={{ color: '#72827F' }}>
                   (737) 215-3986
                 </a>
               </div>
 
               <div>
                 <p className="text-sage font-semibold mb-2">Address</p>
-                <p className="text-gray-700">
+                <p style={{ color: '#72827F' }}>
                   4131 Spicewood Springs Road<br />
                   Bldg. N-12<br />
                   Austin, TX 78759
@@ -292,7 +293,7 @@ export default function Home() {
 
               <div>
                 <p className="text-sage font-semibold mb-2">Availability</p>
-                <p className="text-gray-700">
+                <p style={{ color: '#72827F' }}>
                   In-person & online sessions<br />
                   (phone, video, in-person)
                 </p>
@@ -301,10 +302,10 @@ export default function Home() {
 
             <div>
               <p className="text-sage font-semibold mb-4">Live Chat Support</p>
-              <p className="text-gray-600 mb-4">
+              <p className="mb-4" style={{ color: '#72827F' }}>
                 Have questions? Start a live chat with our support team using Tidio.
               </p>
-              <div className="bg-sage/10 p-6 rounded text-sm text-gray-600">
+              <div className="bg-white/50 p-6 rounded text-sm" style={{ color: '#72827F' }}>
                 <p className="mb-2">Tidio Live Chat Widget</p>
                 <p className="text-xs">(To be integrated - Tidio embed code will go here)</p>
               </div>
@@ -329,8 +330,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-50 border-t border-gray-100 py-12">
-        <div className="max-w-4xl mx-auto px-4 text-center text-gray-600 text-sm">
+      <footer className="py-12" style={{ backgroundColor: '#D5E1DF', borderTop: '1px solid #A8B8B2' }}>
+        <div className="max-w-4xl mx-auto px-4 text-center text-sm" style={{ color: '#72827F' }}>
           <p className="mb-4">
             © 2026 Andy David Counseling. All rights reserved.
           </p>
