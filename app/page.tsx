@@ -10,9 +10,9 @@ export default function Home() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white" style={{ borderBottom: '1px solid #e5e7eb' }}>
         <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
-          <a href="#hero" className="flex items-center gap-3 hover:opacity-80 transition">
+          <a href="#hero" className="flex items-center gap-3 transition">
             <img src="/favicon-32x32.png" alt="Logo" className="w-8 h-8" />
-            <h1 className="text-xl font-bold" style={{ color: '#72827F' }}>Andy David, MA, LPC</h1>
+            <h1 className="text-[#3a3a3a] text-xl font-bold">Andy David, MA, LPC</h1>
           </a>
           
           <button
@@ -24,24 +24,24 @@ export default function Home() {
           </button>
 
           <div className="hidden md:flex gap-8 text-sm font-medium">
-            <a href="#about" className="hover:text-sage transition" style={{ color: '#72827F' }}>About</a>
-            <a href="#approach" className="hover:text-sage transition" style={{ color: '#72827F' }}>Approach</a>
-            <a href="#who-i-serve" className="hover:text-sage transition" style={{ color: '#72827F' }}>Who I Serve</a>
-            <a href="#services" className="hover:text-sage transition" style={{ color: '#72827F' }}>Services</a>
-            <a href="#testimonials" className="hover:text-sage transition" style={{ color: '#72827F' }}>Testimonials</a>
-            <a href="#contact" className="hover:text-sage transition" style={{ color: '#72827F' }}>Contact</a>
+            <a href="#about" className="transition">About</a>
+            <a href="#approach" className="transition">Approach</a>
+            <a href="#who-i-serve" className="transition">Who I Serve</a>
+            <a href="#services" className="transition">Services</a>
+            <a href="#testimonials" className="transition">Testimonials</a>
+            <a href="#contact" className="transition">Contact</a>
           </div>
         </div>
 
         {sidebarOpen && (
           <div className="md:hidden bg-gray-50" style={{ borderTop: '1px solid #e5e7eb' }}>
             <div className="max-w-4xl mx-auto px-4 py-4 flex flex-col gap-4">
-              <a href="#about" className="hover:text-sage" onClick={() => setSidebarOpen(false)} style={{ color: '#72827F' }}>About</a>
-              <a href="#approach" className="hover:text-sage" onClick={() => setSidebarOpen(false)} style={{ color: '#72827F' }}>Approach</a>
-              <a href="#who-i-serve" className="hover:text-sage" onClick={() => setSidebarOpen(false)} style={{ color: '#72827F' }}>Who I Serve</a>
-              <a href="#services" className="hover:text-sage" onClick={() => setSidebarOpen(false)} style={{ color: '#72827F' }}>Services</a>
-              <a href="#testimonials" className="hover:text-sage" onClick={() => setSidebarOpen(false)} style={{ color: '#72827F' }}>Testimonials</a>
-              <a href="#contact" className="hover:text-sage" onClick={() => setSidebarOpen(false)} style={{ color: '#72827F' }}>Contact</a>
+              <a href="#about" onClick={() => setSidebarOpen(false)}>About</a>
+              <a href="#approach" onClick={() => setSidebarOpen(false)}>Approach</a>
+              <a href="#who-i-serve" onClick={() => setSidebarOpen(false)}>Who I Serve</a>
+              <a href="#services" onClick={() => setSidebarOpen(false)}>Services</a>
+              <a href="#testimonials" onClick={() => setSidebarOpen(false)}>Testimonials</a>
+              <a href="#contact" onClick={() => setSidebarOpen(false)}>Contact</a>
             </div>
           </div>
         )}
@@ -50,22 +50,41 @@ export default function Home() {
       {/* Hero Section with Booking Form */}
       <section id="hero" className="py-20 md:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-5xl md:text-6xl font-light mb-2" style={{ color: '#72827F' }}>
-            Andy David
-          </h2>
-          <p className="text-xl mb-2" style={{ color: '#72827F' }}>
+          <img 
+            src="/images/logo.avif" 
+            alt="Andy David Therapist" 
+            className="mx-auto rounded-lg mb-3 object-cover"
+            style={{ maxWidth: '100%', height: 'auto' }}
+          />
+          <p className="text-[#3a3a3a] text-xl mb-2">
             Licensed Professional Counselor, MA
           </p>
-          <p className="text-sage font-semibold mb-8">
+          <p className="text-[#72827F] font-semibold mb-8">
             IFS-Informed Therapist
           </p>
 
           <img 
             src="/images/andy.avif" 
             alt="Andy David" 
-            className="w-64 h-64 mx-auto rounded-lg mb-12 object-cover"
+            className="w-64 h-64 mx-auto rounded-lg mb-3 object-cover"
             style={{ maxWidth: '100%', height: 'auto' }}
           />
+
+          {/* Psychology Today */}
+          <div className="w-full text-center" style={{ maxWidth: '100%' }}>
+            <a 
+              href="https://www.psychologytoday.com/us/therapists/andy-david-austin-tx/455315" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <img 
+                src="/images/verified.png" 
+                alt="Verified by Psychology Today"
+                style={{ margin: '0 auto 15px' }}
+              />
+            </a>
+          </div>
           
           <p className="text-lg max-w-2xl mx-auto mb-8 leading-relaxed" style={{ color: '#72827F' }}>
             I'm here to create a safe, brave, active space for your journey towards healing and growth. 
@@ -77,23 +96,9 @@ export default function Home() {
             Let's find it, together.
           </p>
 
-          <a href="#contact" className="inline-block px-8 py-3 font-semibold hover:opacity-90 transition mb-12" style={{ backgroundColor: '#D5E1DF', color: '#72827F' }}>
+          <a href="#contact" className="inline-block px-8 py-3 font-semibold hover:opacity-90 transition mb-12" style={{ backgroundColor: '#78A3C3', color: '#ffffff' }}>
             Schedule a Free Consultation
           </a>
-
-          {/* Booking Form */}
-          <div className="w-full" style={{ maxWidth: '100%', minHeight: '600px' }}>
-            <iframe
-              className="Z8YsjS"
-              title="Embedded Content"
-              name="htmlComp-iframe"
-              width="100%"
-              height="100%"
-              allow="fullscreen"
-              src="https://www-andy-david-com.filesusr.com/html/89bf8c_60bbdd049bb8dd83ee0befbafbe74cc0.html"
-              style={{ minHeight: '600px', border: 'none' }}
-            ></iframe>
-          </div>
         </div>
       </section>
 
@@ -105,8 +110,8 @@ export default function Home() {
           </h3>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-6 rounded bg-gray-50" style={{ borderLeft: '4px solid #D5E1DF' }}>
-              <h4 className="text-lg font-semibold mb-4" style={{ color: '#72827F' }}>
+            <div className="p-6 rounded bg-gray-50" style={{ borderLeft: '4px solid #78A3C3' }}>
+              <h4 className="text-[#3a3a3a] text-lg font-semibold mb-4">
                 Qualifications & Credentials
               </h4>
               <ul className="space-y-4" style={{ color: '#72827F' }}>
@@ -124,8 +129,8 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="p-6 rounded bg-gray-50" style={{ borderLeft: '4px solid #D5E1DF' }}>
-              <h4 className="text-lg font-semibold mb-4" style={{ color: '#72827F' }}>
+            <div className="p-6 rounded bg-gray-50" style={{ borderLeft: '4px solid #78A3C3' }}>
+              <h4 className="text-[#3a3a3a] text-lg font-semibold mb-4">
                 Education & Training
               </h4>
               <ul className="space-y-4" style={{ color: '#72827F' }}>
@@ -155,8 +160,8 @@ export default function Home() {
           </h3>
 
           <div className="space-y-8 max-w-3xl mx-auto">
-            <div className="p-6 rounded border-l-4" style={{ borderColor: '#D5E1DF', backgroundColor: 'white' }}>
-              <h4 className="text-lg font-semibold mb-4" style={{ color: '#72827F' }}>
+            <div className="p-6 rounded border-l-4" style={{ borderColor: '#78A3C3', backgroundColor: 'white' }}>
+              <h4 className="text-[#3a3a3a] text-lg font-semibold mb-4">
                 Active, Brave Space
               </h4>
               <p style={{ color: '#72827F' }} className="leading-relaxed">
@@ -167,8 +172,8 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="p-6 rounded border-l-4" style={{ borderColor: '#D5E1DF', backgroundColor: 'white' }}>
-              <h4 className="text-lg font-semibold mb-4" style={{ color: '#72827F' }}>
+            <div className="p-6 rounded border-l-4" style={{ borderColor: '#78A3C3', backgroundColor: 'white' }}>
+              <h4 className="text-[#3a3a3a] text-lg font-semibold mb-4">
                 Internal Family Systems (IFS)
               </h4>
               <p style={{ color: '#72827F' }} className="leading-relaxed">
@@ -179,8 +184,8 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="p-6 rounded border-l-4" style={{ borderColor: '#D5E1DF', backgroundColor: 'white' }}>
-              <h4 className="text-lg font-semibold mb-4" style={{ color: '#72827F' }}>
+            <div className="p-6 rounded border-l-4" style={{ borderColor: '#78A3C3', backgroundColor: 'white' }}>
+              <h4 className="text-[#3a3a3a] text-lg font-semibold mb-4">
                 Your Potential
               </h4>
               <p style={{ color: '#72827F' }} className="leading-relaxed italic">
@@ -203,8 +208,8 @@ export default function Home() {
           </h3>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="p-6 rounded border" style={{ borderColor: '#D5E1DF' }}>
-              <h4 className="text-lg font-semibold mb-4 pb-4" style={{ color: '#72827F', borderBottom: '2px solid #D5E1DF' }}>
+            <div className="p-6 rounded border" style={{ borderColor: '#e5e7eb' }}>
+              <h4 className="text-[#3a3a3a] text-lg font-semibold mb-4 pb-4" style={{borderBottom: '2px solid #D5E1DF' }}>
                 Primary Issues
               </h4>
               <ul className="space-y-2" style={{ color: '#72827F' }}>
@@ -231,8 +236,8 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="p-6 rounded border" style={{ borderColor: '#D5E1DF' }}>
-              <h4 className="text-lg font-semibold mb-4 pb-4" style={{ color: '#72827F', borderBottom: '2px solid #D5E1DF' }}>
+            <div className="p-6 rounded border" style={{ borderColor: '#e5e7eb' }}>
+              <h4 className="text-[#3a3a3a] text-lg font-semibold mb-4 pb-4" style={{borderBottom: '2px solid #D5E1DF' }}>
                 Who I Work With
               </h4>
               <ul className="space-y-2" style={{ color: '#72827F' }}>
@@ -265,8 +270,8 @@ export default function Home() {
           </div>
 
           {/* Additional Expertise */}
-          <div className="p-8 rounded bg-gray-50 border-l-4" style={{ borderColor: '#D5E1DF' }}>
-            <h4 className="text-lg font-semibold mb-6" style={{ color: '#72827F' }}>
+          <div className="p-8 rounded bg-gray-50 border-l-4" style={{ borderColor: '#78A3C3' }}>
+            <h4 className="text-[#3a3a3a] text-lg font-semibold mb-6">
               Additional Areas of Expertise
             </h4>
             <div className="grid md:grid-cols-2 gap-8">
@@ -316,8 +321,8 @@ export default function Home() {
           </h3>
 
           {/* Pricing */}
-          <div className="p-8 rounded mb-8 border-l-4 bg-white" style={{ borderColor: '#D5E1DF' }}>
-            <h4 className="text-lg font-semibold mb-6" style={{ color: '#72827F' }}>Pricing & Payment</h4>
+          <div className="p-8 rounded mb-8 border-l-4 bg-white" style={{ borderColor: '#78A3C3' }}>
+            <h4 className="text-[#3a3a3a] text-lg font-semibold mb-6">Pricing & Payment</h4>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <p className="font-semibold mb-4 pb-3" style={{ color: '#72827F', borderBottom: '1px solid #e5e7eb' }}>Session Fees</p>
@@ -346,8 +351,8 @@ export default function Home() {
           </div>
 
           {/* Insurance */}
-          <div className="p-8 rounded mb-8 border-l-4 bg-white" style={{ borderColor: '#D5E1DF' }}>
-            <h4 className="text-lg font-semibold mb-4" style={{ color: '#72827F' }}>Insurance</h4>
+          <div className="p-8 rounded mb-8 border-l-4 bg-white" style={{ borderColor: '#78A3C3' }}>
+            <h4 className="text-[#3a3a3a] text-lg font-semibold mb-4">Insurance</h4>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <p className="font-semibold mb-3 pb-3" style={{ color: '#72827F', borderBottom: '1px solid #e5e7eb' }}>In-Network Providers</p>
@@ -367,8 +372,8 @@ export default function Home() {
           </div>
 
           {/* Availability */}
-          <div className="p-8 rounded mb-8 border-l-4 bg-white" style={{ borderColor: '#D5E1DF' }}>
-            <h4 className="text-lg font-semibold mb-6" style={{ color: '#72827F' }}>Availability & Response</h4>
+          <div className="p-8 rounded mb-8 border-l-4 bg-white" style={{ borderColor: '#78A3C3' }}>
+            <h4 className="text-[#3a3a3a] text-lg font-semibold mb-6">Availability & Response</h4>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <p className="font-semibold mb-3 pb-3" style={{ color: '#72827F', borderBottom: '1px solid #e5e7eb' }}>Session Availability</p>
@@ -393,8 +398,8 @@ export default function Home() {
           </div>
 
           {/* Location */}
-          <div className="p-8 rounded border-l-4 bg-white" style={{ borderColor: '#D5E1DF' }}>
-            <h4 className="text-lg font-semibold mb-4" style={{ color: '#72827F' }}>In-Person Location</h4>
+          <div className="p-8 rounded border-l-4 bg-white" style={{ borderColor: '#78A3C3' }}>
+            <h4 className="text-[#3a3a3a] text-lg font-semibold mb-4">In-Person Location</h4>
             <p style={{ color: '#72827F' }} className="mb-2">
               4131 Spicewood Springs Road<br />
               Bldg. N-12<br />
@@ -415,7 +420,7 @@ export default function Home() {
             What Others Say
           </h3>
 
-          <div className="p-8 md:p-12 rounded border-l-4 bg-gray-50" style={{ borderColor: '#D5E1DF' }}>
+          <div className="p-8 md:p-12 rounded border-l-4 bg-gray-50" style={{ borderColor: '#78A3C3' }}>
             <p className="text-lg mb-6 italic" style={{ color: '#72827F' }}>
               "I was lucky enough to work with Andy while we were associates under the same supervisor. 
               He is one of a kind. Intuitive, patient, wholehearted, and funny. 
@@ -439,24 +444,24 @@ export default function Home() {
           </h3>
 
           <div className="grid md:grid-cols-2 gap-12">
-            <div className="p-8 rounded bg-white border-l-4" style={{ borderColor: '#D5E1DF' }}>
+            <div className="p-8 rounded bg-white border-l-4" style={{ borderColor: '#78A3C3' }}>
               <div className="space-y-6">
                 <div>
-                  <p className="text-sage font-semibold mb-2">Phone</p>
-                  <a href="tel:+15128427572" className="hover:text-sage transition text-lg" style={{ color: '#72827F' }}>
+                  <p className="text-[#3a3a3a] font-semibold mb-2">Phone</p>
+                  <a href="tel:+15128427572" className="transition text-lg">
                     512.842.7572
                   </a>
                 </div>
 
                 <div style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1.5rem' }}>
-                  <p className="text-sage font-semibold mb-2">Email</p>
-                  <a href="mailto:andy@andy-david.com" className="hover:text-sage transition" style={{ color: '#72827F' }}>
+                  <p className="text-[#3a3a3a] font-semibold mb-2">Email</p>
+                  <a href="mailto:andy@andy-david.com" className="transition">
                     andy@andy-david.com
                   </a>
                 </div>
 
                 <div style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1.5rem' }}>
-                  <p className="text-sage font-semibold mb-2">Address</p>
+                  <p className="text-[#3a3a3a] font-semibold mb-2">Address</p>
                   <p style={{ color: '#72827F' }}>
                     4131 Spicewood Springs Road<br />
                     Bldg. N-12<br />
@@ -465,7 +470,7 @@ export default function Home() {
                 </div>
 
                 <div style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1.5rem' }}>
-                  <p className="text-sage font-semibold mb-2">Hours</p>
+                  <p className="text-[#3a3a3a] font-semibold mb-2">Hours</p>
                   <p style={{ color: '#72827F' }} className="text-sm">
                     In-person: Mon & Wed (10am-4pm)<br />
                     Online: Fri (10am-4pm)<br />
@@ -475,8 +480,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="p-8 rounded bg-white border-l-4" style={{ borderColor: '#D5E1DF' }}>
-              <p className="text-sage font-semibold mb-4">Schedule a Consultation</p>
+            <div className="p-8 rounded bg-white border-l-4" style={{ borderColor: '#78A3C3' }}>
+              <p className="text-[#3a3a3a] font-semibold mb-4">Schedule a Consultation</p>
               <p className="mb-6 text-sm" style={{ color: '#72827F' }}>
                 Ready to begin your journey? Book a free 15-minute phone consultation below.
               </p>
@@ -485,7 +490,6 @@ export default function Home() {
                   src="https://calendly.com/luna-theaiassistant/free-consultation?month=2026-03"
                   width="100%"
                   height="400"
-                  frameBorder="0"
                   style={{ border: 'none' }}
                 ></iframe>
               </div>
@@ -505,7 +509,7 @@ export default function Home() {
             If you're in crisis, please contact a mental health emergency service.
           </p>
           <p>
-            <a href="tel:+19884255000" className="text-sage hover:text-sage-dark transition font-semibold">
+            <a href="tel:+19884255000" className="transition font-semibold">
               National Suicide Prevention Lifeline: 988
             </a>
           </p>

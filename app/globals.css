@@ -30,13 +30,13 @@ section {
 
 /* Subtle sage accent for links & accents */
 a {
-  color: #D5E1DF;
+  color: #72827f;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #A8B8B2;
+  color: #78A3C3;
 }
 
 /* Button styles */
