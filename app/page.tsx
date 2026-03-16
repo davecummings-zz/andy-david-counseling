@@ -17,10 +17,10 @@ export default function Home() {
           
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="md:hidden text-2xl"
-            style={{ color: '#72827F' }}
+            className="md:hidden text-3xl"
+            style={{ color: '#3a3a3a' }}
           >
-            ☰
+            {sidebarOpen ? '✕' : '☰'}
           </button>
 
           <div className="hidden md:flex gap-8 text-sm font-medium">
@@ -48,7 +48,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section with Booking Form */}
-      <section id="hero" className="py-20 md:py-32 bg-white">
+      <section id="hero" className="pt-20 pb-0 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <img 
             src="/images/logo.avif" 
@@ -105,7 +105,7 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-light mb-12 text-center" style={{ color: '#72827F' }}>
+          <h3 className="text-[#3a3a3a] text-3xl md:text-4xl font-light mb-12 text-center">
             About Andy
           </h3>
 
@@ -155,7 +155,7 @@ export default function Home() {
       {/* Approach Section */}
       <section id="approach" className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-light mb-12 text-center" style={{ color: '#72827F' }}>
+          <h3 className="text-[#3a3a3a] text-3xl md:text-4xl font-light mb-12 text-center">
             My Approach to Therapy
           </h3>
 
@@ -203,7 +203,7 @@ export default function Home() {
       {/* Who I Help / Specialties */}
       <section id="who-i-serve" className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-light mb-12 text-center" style={{ color: '#72827F' }}>
+          <h3 className="text-[#3a3a3a] text-3xl md:text-4xl font-light mb-12 text-center">
             Who I Serve & What I Help With
           </h3>
 
@@ -316,7 +316,7 @@ export default function Home() {
       {/* Services & Details */}
       <section id="services" className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-light mb-12 text-center" style={{ color: '#72827F' }}>
+          <h3 className="text-[#3a3a3a] text-3xl md:text-4xl font-light mb-12 text-center">
             Services & Details
           </h3>
 
@@ -416,7 +416,7 @@ export default function Home() {
       {/* Testimonials */}
       <section id="testimonials" className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-light mb-12 text-center" style={{ color: '#72827F' }}>
+          <h3 className="text-[#3a3a3a] text-3xl md:text-4xl font-light mb-12 text-center">
             What Others Say
           </h3>
 
@@ -439,7 +439,7 @@ export default function Home() {
       {/* Contact */}
       <section id="contact" className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-light mb-12 text-center" style={{ color: '#72827F' }}>
+          <h3 className="text-[#3a3a3a] text-3xl md:text-4xl font-light mb-12 text-center">
             Get in Touch
           </h3>
 
