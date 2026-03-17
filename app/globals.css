@@ -77,3 +77,49 @@ select {
 ::-webkit-scrollbar-thumb:hover {
   background: #A8B8B2;
 }
+
+/* Parallax Background Effect */
+.parallax-section {
+  background-image: url('/images/marble-backround.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.parallax-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 1;
+}
+
+.parallax-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Box shadow for border-left sections */
+.border-l-4 {
+  box-shadow: 0 2px 4px rgba(114, 130, 127, 0.15);
+}
+
+/* Remove shadow from testimonials */
+.border-l-4.bg-gray-50 {
+  box-shadow: none;
+}
+
+/* Hide iframe scrollbars */
+iframe {
+  scrolling: no;
+  overflow: hidden;
+}
+
+.flex-1 iframe {
+  display: block;
+}

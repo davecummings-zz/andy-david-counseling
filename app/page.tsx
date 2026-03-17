@@ -23,25 +23,25 @@ export default function Home() {
             {sidebarOpen ? '✕' : '☰'}
           </button>
 
-          <div className="hidden md:flex gap-8 text-sm font-medium">
-            <a href="#about" className="transition">About</a>
-            <a href="#approach" className="transition">Approach</a>
-            <a href="#who-i-serve" className="transition">Who I Serve</a>
-            <a href="#services" className="transition">Services</a>
-            <a href="#testimonials" className="transition">Testimonials</a>
-            <a href="#contact" className="transition">Contact</a>
+          <div className="hidden md:flex gap-6 text-xs font-medium">
+            <a href="#about" className="text-[#3a3a3a] transition uppercase whitespace-nowrap">About</a>
+            <a href="#approach" className="text-[#3a3a3a] transition uppercase whitespace-nowrap">Approach</a>
+            <a href="#who-i-serve" className="text-[#3a3a3a] transition uppercase whitespace-nowrap">Who I Serve</a>
+            <a href="#services" className="text-[#3a3a3a] transition uppercase whitespace-nowrap">Services</a>
+            <a href="#testimonials" className="text-[#3a3a3a] transition uppercase whitespace-nowrap">Testimonials</a>
+            <a href="#contact" className="text-[#3a3a3a] transition uppercase whitespace-nowrap">Contact</a>
           </div>
         </div>
 
         {sidebarOpen && (
           <div className="md:hidden bg-gray-50" style={{ borderTop: '1px solid #e5e7eb' }}>
             <div className="max-w-4xl mx-auto px-4 py-4 flex flex-col gap-4">
-              <a href="#about" onClick={() => setSidebarOpen(false)}>About</a>
-              <a href="#approach" onClick={() => setSidebarOpen(false)}>Approach</a>
-              <a href="#who-i-serve" onClick={() => setSidebarOpen(false)}>Who I Serve</a>
-              <a href="#services" onClick={() => setSidebarOpen(false)}>Services</a>
-              <a href="#testimonials" onClick={() => setSidebarOpen(false)}>Testimonials</a>
-              <a href="#contact" onClick={() => setSidebarOpen(false)}>Contact</a>
+              <a href="#about" onClick={() => setSidebarOpen(false)} className="uppercase">About</a>
+              <a href="#approach" onClick={() => setSidebarOpen(false)} className="uppercase">Approach</a>
+              <a href="#who-i-serve" onClick={() => setSidebarOpen(false)} className="uppercase">Who I Serve</a>
+              <a href="#services" onClick={() => setSidebarOpen(false)} className="uppercase">Services</a>
+              <a href="#testimonials" onClick={() => setSidebarOpen(false)} className="uppercase">Testimonials</a>
+              <a href="#contact" onClick={() => setSidebarOpen(false)} className="uppercase">Contact</a>
             </div>
           </div>
         )}
@@ -91,7 +91,7 @@ export default function Home() {
             We all have seasons of life where we feel overwhelmed, depressed, anxious, or out of sync in relationships.
           </p>
 
-          <p className="max-w-2xl mx-auto mb-12" style={{ color: '#72827F' }}>
+          <p className="text-lg max-w-2xl mx-auto mb-12" style={{ color: '#72827F' }}>
             But there is a pathway to becoming the most authentic version of yourself. Your life has meaning and purpose. 
             Let's find it, together.
           </p>
@@ -153,7 +153,7 @@ export default function Home() {
       </section>
 
       {/* Approach Section */}
-      <section id="approach" className="py-16 md:py-24 bg-gray-50">
+      <section id="approach" className="py-16 md:py-24 parallax-section">
         <div className="max-w-4xl mx-auto px-4">
           <h3 className="text-[#3a3a3a] text-3xl md:text-4xl font-light mb-12 text-center">
             My Approach to Therapy
@@ -208,7 +208,7 @@ export default function Home() {
           </h3>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="p-6 rounded border" style={{ borderColor: '#e5e7eb' }}>
+            <div className="p-6 rounded bg-gray-50 border-l-4" style={{ borderColor: '#78A3C3' }}>
               <h4 className="text-[#3a3a3a] text-lg font-semibold mb-4 pb-4" style={{borderBottom: '2px solid #D5E1DF' }}>
                 Primary Issues
               </h4>
@@ -236,7 +236,7 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="p-6 rounded border" style={{ borderColor: '#e5e7eb' }}>
+            <div className="p-6 rounded bg-gray-50 border-l-4" style={{ borderColor: '#78A3C3' }}>
               <h4 className="text-[#3a3a3a] text-lg font-semibold mb-4 pb-4" style={{borderBottom: '2px solid #D5E1DF' }}>
                 Who I Work With
               </h4>
@@ -314,7 +314,7 @@ export default function Home() {
       </section>
 
       {/* Services & Details */}
-      <section id="services" className="py-16 md:py-24 bg-gray-50">
+      <section id="services" className="py-16 md:py-24 parallax-section">
         <div className="max-w-4xl mx-auto px-4">
           <h3 className="text-[#3a3a3a] text-3xl md:text-4xl font-light mb-12 text-center">
             Services & Details
@@ -329,11 +329,11 @@ export default function Home() {
                 <div className="space-y-3" style={{ color: '#72827F' }}>
                   <div>
                     <p className="font-semibold">Individual Sessions</p>
-                    <p className="text-2xl">$160</p>
+                    <p className="text-1xl">$160</p>
                   </div>
                   <div>
                     <p className="font-semibold">Couple Sessions</p>
-                    <p className="text-2xl">$160</p>
+                    <p className="text-1xl">$160</p>
                   </div>
                 </div>
               </div>
@@ -420,8 +420,8 @@ export default function Home() {
             What Others Say
           </h3>
 
-          <div className="p-8 md:p-12 rounded border-l-4 bg-gray-50" style={{ borderColor: '#78A3C3' }}>
-            <p className="text-lg mb-6 italic" style={{ color: '#72827F' }}>
+          <div className="p-8 md:p-12 rounded border-l-4 bg-gray-50 shadow-none" style={{ borderColor: '#78A3C3' }}>
+            <p className="text-lg mb-6 italic font-bold" style={{ color: '#72827F' }}>
               "I was lucky enough to work with Andy while we were associates under the same supervisor. 
               He is one of a kind. Intuitive, patient, wholehearted, and funny. 
               I would highly recommend working with him. He's one of the good ones."
@@ -437,59 +437,75 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-16 md:py-24 bg-gray-50">
+      <section id="contact" className="py-16 md:py-24 parallax-section">
         <div className="max-w-4xl mx-auto px-4">
           <h3 className="text-[#3a3a3a] text-3xl md:text-4xl font-light mb-12 text-center">
             Get in Touch
           </h3>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="flex flex-col gap-8 max-w-2xl mx-auto">
+            {/* Contact Info Card */}
             <div className="p-8 rounded bg-white border-l-4" style={{ borderColor: '#78A3C3' }}>
-              <div className="space-y-6">
-                <div>
-                  <p className="text-[#3a3a3a] font-semibold mb-2">Phone</p>
-                  <a href="tel:+15128427572" className="transition text-lg">
-                    512.842.7572
-                  </a>
-                </div>
+                <div className="space-y-6">
+                  <div>
+                    <p className="text-[#3a3a3a] font-semibold mb-2">Phone</p>
+                    <a href="tel:+15128427572" className="transition text-lg">
+                      512.842.7572
+                    </a>
+                  </div>
 
-                <div style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1.5rem' }}>
-                  <p className="text-[#3a3a3a] font-semibold mb-2">Email</p>
-                  <a href="mailto:andy@andy-david.com" className="transition">
-                    andy@andy-david.com
-                  </a>
-                </div>
+                  <div style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1.5rem' }}>
+                    <p className="text-[#3a3a3a] font-semibold mb-2">Email</p>
+                    <a href="mailto:andy@andy-david.com" className="transition">
+                      andy@andy-david.com
+                    </a>
+                  </div>
 
-                <div style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1.5rem' }}>
-                  <p className="text-[#3a3a3a] font-semibold mb-2">Address</p>
-                  <p style={{ color: '#72827F' }}>
-                    4131 Spicewood Springs Road<br />
-                    Bldg. N-12<br />
-                    Austin, TX 78759
-                  </p>
-                </div>
+                  <div style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1.5rem' }}>
+                    <p className="text-[#3a3a3a] font-semibold mb-2">Address</p>
+                    <p style={{ color: '#72827F' }}>
+                      4131 Spicewood Springs Road<br />
+                      Bldg. N-12<br />
+                      Austin, TX 78759
+                    </p>
+                  </div>
 
-                <div style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1.5rem' }}>
-                  <p className="text-[#3a3a3a] font-semibold mb-2">Hours</p>
-                  <p style={{ color: '#72827F' }} className="text-sm">
-                    In-person: Mon & Wed (10am-4pm)<br />
-                    Online: Fri (10am-4pm)<br />
-                    Response: 1-2 business days
-                  </p>
+                  <div style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1.5rem' }}>
+                    <p className="text-[#3a3a3a] font-semibold mb-2">Hours</p>
+                    <p style={{ color: '#72827F' }} className="text-sm">
+                      In-person: Mon & Wed (10am-4pm)<br />
+                      Online: Fri (10am-4pm)<br />
+                      Response: 1-2 business days
+                    </p>
+                  </div>
                 </div>
               </div>
+
+
+            {/* Google Map */}
+            <div className="h-80 rounded overflow-hidden border-l-4" style={{ borderColor: '#D5E1DF' }}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3427.8557451413387!2d-97.80156292346863!3d30.3878876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644ca6c0c0c0c0d%3A0x1234567890abcdef!2s4131%20Spicewood%20Springs%20Rd%2C%20Austin%2C%20TX%2078759!5e0!3m2!1sen!2sus!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
 
-            <div className="p-8 rounded bg-white border-l-4" style={{ borderColor: '#78A3C3' }}>
+            {/* Schedule Consultation */}
+            <div className="p-8 rounded bg-white border-l-4 flex flex-col" style={{ borderColor: '#78A3C3', minHeight: '600px' }}>
               <p className="text-[#3a3a3a] font-semibold mb-4">Schedule a Consultation</p>
               <p className="mb-6 text-sm" style={{ color: '#72827F' }}>
                 Ready to begin your journey? Book a free 15-minute phone consultation below.
               </p>
-              <div style={{ minHeight: '400px' }}>
+              <div className="h-[860px] md:h-[820px]">
                 <iframe
                   src="https://calendly.com/luna-theaiassistant/free-consultation?month=2026-03"
                   width="100%"
-                  height="400"
+                  height="100%"
                   style={{ border: 'none' }}
                 ></iframe>
               </div>
@@ -499,7 +515,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-white" style={{ borderTop: '1px solid #e5e7eb' }}>
+      <footer className="py-12 bg-gray-50" style={{ borderTop: '1px solid #e5e7eb' }}>
         <div className="max-w-4xl mx-auto px-4 text-center text-sm" style={{ color: '#72827F' }}>
           <p className="mb-4">
             © 2026 Andy David Counseling. All rights reserved.
