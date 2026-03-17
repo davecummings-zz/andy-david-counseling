@@ -88,6 +88,13 @@ select {
   position: relative;
 }
 
+/* Disable parallax on mobile (fixed doesn't work on touch devices) */
+@media (max-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll;
+  }
+}
+
 .parallax-section::before {
   content: '';
   position: absolute;

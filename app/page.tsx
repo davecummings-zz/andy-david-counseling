@@ -208,7 +208,7 @@ export default function Home() {
           </h3>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="p-6 rounded bg-gray-50 border-l-4" style={{ borderColor: '#78A3C3' }}>
+            <div className="p-6 rounded border">
               <h4 className="text-[#3a3a3a] text-lg font-semibold mb-4 pb-4" style={{borderBottom: '2px solid #D5E1DF' }}>
                 Primary Issues
               </h4>
@@ -236,7 +236,7 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="p-6 rounded bg-gray-50 border-l-4" style={{ borderColor: '#78A3C3' }}>
+            <div className="p-6 rounded border">
               <h4 className="text-[#3a3a3a] text-lg font-semibold mb-4 pb-4" style={{borderBottom: '2px solid #D5E1DF' }}>
                 Who I Work With
               </h4>
@@ -421,7 +421,7 @@ export default function Home() {
           </h3>
 
           <div className="p-8 md:p-12 rounded border-l-4 bg-gray-50 shadow-none" style={{ borderColor: '#78A3C3' }}>
-            <p className="text-lg mb-6 italic font-bold" style={{ color: '#72827F' }}>
+            <p className="text-lg mb-6 italic" style={{ color: '#72827F' }}>
               "I was lucky enough to work with Andy while we were associates under the same supervisor. 
               He is one of a kind. Intuitive, patient, wholehearted, and funny. 
               I would highly recommend working with him. He's one of the good ones."
